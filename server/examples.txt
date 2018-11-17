@@ -1,0 +1,20 @@
+// getUsers Example: http://localhost:3000/api/users/getUsers?pageNumber=2&top=10
+
+// addUsers Example: http://localhost:3000/api/users/addUsers
+
+Headers:
+
+User-Agent: Fiddler
+Host: localhost:3000
+Content-Length: 322
+Content-Type: application/json
+
+JsonBody:
+
+{
+        "users": [
+            {"id":"999991","name":"USER_180","position":"IT Technician","monthlySlary":10000},
+            {"id":"999992","name":"USER_180","position":"IT Technician","monthlySlary":10000},
+            {"id":"999993","name":"USER_180","position":"IT Technician","monthlySlary":10000}
+        ]
+}
