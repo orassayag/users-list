@@ -120,7 +120,6 @@ const createUsersFromJsons = (users, usersNames) => {
 
 // Create users from array of users data and array of users names from API call.
 const createUsersFromAPI = (data) => {
-    debugger;
 
     // Validate parameters.
     if (!data || data.users.length <= 0) {
