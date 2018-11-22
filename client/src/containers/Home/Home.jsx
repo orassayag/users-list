@@ -8,6 +8,7 @@ import { Loader, Item } from '../../components/UI';
 class Home extends Component {
     state = {
         pageNumber: 1,
+        preventLoadMore: false,
         displayLargeLoader: true,
         displaySmallLoader: false,
         hasMore: true,
@@ -16,6 +17,7 @@ class Home extends Component {
     };
 
     top = 50;
+    socket = socketIOClient(settings.api_base_url);
 
     constructor(props) {
         super(props);
@@ -29,6 +31,7 @@ class Home extends Component {
 
         const { error, loadUsers,
             state: {
+                preventLoadMore,
                 pageNumber,
                 displayLargeLoader,
                 displaySmallLoader,
@@ -36,7 +39,7 @@ class Home extends Component {
             }
         } = this;
 
-        if (error || displayLargeLoader || displaySmallLoader || !hasMore) {
+        if (error || displayLargeLoader || displaySmallLoader || !hasMore || preventLoadMore) {
             return;
         }
 
@@ -61,9 +64,8 @@ class Home extends Component {
             top: this.top
         });
 
-        const socket = socketIOClient(settings.api_base_url);
-        socket.on('newUsers', (newUsers) => {
-            this.addedUsers(newUsers);
+        this.socket.on('newUsers', (newUsers) => {
+            this.addedUsers(newUsers, true);
         });
     }
 
@@ -71,14 +73,15 @@ class Home extends Component {
         window.removeEventListener('scroll', this.handleOnScroll);
     }
 
-    addedUsers = (newUsers) => {
+    addedUsers = (newUsers, preventLoadMore) => {
         this.setState({
+            preventLoadMore: preventLoadMore,
             users: [
                 ...this.state.users,
                 ...newUsers
             ]
         });
-        this.scrollToLastElement();
+        this.scrollToLastElement(preventLoadMore);
     };
 
     loadUsers = (data) => {
@@ -105,7 +108,19 @@ class Home extends Component {
         });
     }
 
-    scrollToLastElement = () => {
+    scrollToLastElement = (preventLoadMore) => {
+        const intersectionObserver = new IntersectionObserver((entries) => {
+            let [entry] = entries;
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    this.setState({ preventLoadMore: !preventLoadMore });
+                }, 100);
+            }
+        });
+
+        // start observing
+        intersectionObserver.observe(this.lastElement.current);
+
         // Scroll into an element.
         this.lastElement.current.scrollIntoView({
             behavior: 'smooth',
