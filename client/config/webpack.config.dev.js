@@ -14,7 +14,6 @@ const paths = require('./paths');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 
-
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
 const publicPath = '/';
@@ -261,41 +260,41 @@ module.exports = {
           {
             test: /\.(?:le|c)ss$/,
             use: [
-                require.resolve('style-loader'),
-                {
-                    loader: require.resolve('css-loader'),
-                    options: {
-                        importLoaders: 1,
-                    },
+              require.resolve('style-loader'),
+              {
+                loader: require.resolve('css-loader'),
+                options: {
+                  importLoaders: 1,
                 },
-                {
-                    loader: require.resolve('less-loader'),
-                    options: {
-                        importLoaders: 1,
-                    },
+              },
+              {
+                loader: require.resolve('less-loader'),
+                options: {
+                  importLoaders: 1,
                 },
-                {
-                    loader: require.resolve('postcss-loader'),
-                    options: {
-                        // Necessary for external CSS imports to work
-                        // https://github.com/facebookincubator/create-react-app/issues/2677
-                        ident: 'postcss',
-                        plugins: () => [
-                            require('postcss-flexbugs-fixes'),
-                            autoprefixer({
-                                browsers: [
-                                    '>1%',
-                                    'last 4 versions',
-                                    'Firefox ESR',
-                                    'not ie < 9', // React doesn't support IE8 anyway
-                                ],
-                                flexbox: 'no-2009',
-                            }),
-                        ],
-                    },
+              },
+              {
+                loader: require.resolve('postcss-loader'),
+                options: {
+                  // Necessary for external CSS imports to work
+                  // https://github.com/facebookincubator/create-react-app/issues/2677
+                  ident: 'postcss',
+                  plugins: () => [
+                    require('postcss-flexbugs-fixes'),
+                    autoprefixer({
+                      browsers: [
+                        '>1%',
+                        'last 4 versions',
+                        'Firefox ESR',
+                        'not ie < 9', // React doesn't support IE8 anyway
+                      ],
+                      flexbox: 'no-2009',
+                    }),
+                  ],
                 },
+              },
             ],
-        },
+          },
           // "file" loader makes sure those assets get served by WebpackDevServer.
           // When you `import` an asset, you get its (virtual) filename.
           // In production, they would get copied to the `build` folder.

@@ -152,7 +152,7 @@ class Home extends Component {
                             <div className="table-content">
                                 {users.map(user => (
                                     <Fragment key={user.id}>
-                                        <Item items={[user.name, user.position, user.monthlySlary]} ref={this.lastElement} />
+                                        <Item items={[user.name, user.position, user.monthlySalary]} ref={this.lastElement} />
                                     </Fragment>
                                 ))}
                             </div>

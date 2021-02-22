@@ -13,8 +13,8 @@ JsonBody:
 
 {
         "users": [
-            {"id":"999991","name":"USER_180","position":"IT Technician","monthlySlary":10000},
-            {"id":"999992","name":"USER_180","position":"IT Technician","monthlySlary":10000},
-            {"id":"999993","name":"USER_180","position":"IT Technician","monthlySlary":10000}
+            {"id":"999991","name":"USER_180","position":"IT Technician","monthlySalary":10000},
+            {"id":"999992","name":"USER_180","position":"IT Technician","monthlySalary":10000},
+            {"id":"999993","name":"USER_180","position":"IT Technician","monthlySalary":10000}
         ]
 }

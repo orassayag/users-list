@@ -1,7 +1,6 @@
 # Users List
 
-Built in November 2018.
-React + Node.js load list of users with infinite scroll + Call Rest API with Websocket and view new users added in react.
+Built in November 2018. React.js + Node.js load list of users with infinite scroll + Call Rest API with Websocket and view new users added in React.js.
 
 ## Getting Started
 
@@ -34,10 +33,14 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
-## Authors
+## Author
 
 * **Or Assayag** - *Initial work* - [orassayag](https://github.com/orassayag)
+* Or Assayag <orassayag@gmail.com>
+* GitHub: https://github.com/orassayag
+* StackOverFlow: https://stackoverflow.com/users/4442606/or-assayag?tab=profile
+* LinkedIn: https://il.linkedin.com/in/orassayag
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This application has UNLICENSED License.

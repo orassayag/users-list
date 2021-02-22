@@ -6,7 +6,7 @@ class User {
         this.id = user.id;
         this.name = user.name;
         this.position = user.position;
-        this.monthlySlary = user.monthlySlary;
+        this.monthlySalary = user.monthlySalary;
     }
 }
 
@@ -41,14 +41,14 @@ const validateUser = (userData, i) => {
         return `User index ${i} - User position less than the minimum of 5 characters.`;
     }
 
-    // Validate monthlySlary.
-    if (!userData.monthlySlary) {
-        return `User index ${i} - User monthlySlary is missing.`;
+    // Validate monthlySalary.
+    if (!userData.monthlySalary) {
+        return `User index ${i} - User monthlySalary is missing.`;
     }
 
-    const userMonthlySlary = Number(userData.monthlySlary);
-    if (isNaN(userMonthlySlary)) {
-        return `User index ${i} - Invalid user monthlySlary parameter (Not a number).`;
+    const userMonthlySalary = Number(userData.monthlySalary);
+    if (isNaN(userMonthlySalary)) {
+        return `User index ${i} - Invalid user monthlySalary parameter (Not a number).`;
     }
 
     return null;
@@ -112,7 +112,7 @@ const createUsersFromJsons = (users, usersNames) => {
             id: userData.id,
             name: userNameData.name,
             position: userData.position,
-            monthlySlary: addCommasToNumber(userData.monthlySlary)
+            monthlySalary: addCommasToNumber(userData.monthlySalary)
         }));
     }
     return usersList;
@@ -151,7 +151,7 @@ const createUsersFromAPI = (data) => {
             id: userData.id,
             name: userData.name,
             position: userData.position,
-            monthlySlary: addCommasToNumber(userData.monthlySlary)
+            monthlySalary: addCommasToNumber(userData.monthlySalary)
         }));
     }
     return usersList;

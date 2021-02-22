@@ -4,7 +4,10 @@
         "es6": true,
         "jest": true
     },
-    "extends": ["react-app", "plugin:react/recommended"],
+    "extends": [
+        "react-app",
+        "plugin:react/recommended"
+    ],
     "parser": "babel-eslint",
     "parserOptions": {
         "ecmaFeatures": {
@@ -12,7 +15,9 @@
         },
         "sourceType": "module"
     },
-    "plugins": ["react"],
+    "plugins": [
+        "react"
+    ],
     "rules": {
         "quotes": [
             "error",
@@ -21,8 +26,14 @@
                 "allowTemplateLiterals": true
             }
         ],
-        "semi": ["error", "always"],
-        "comma-dangle": ["error", "never"],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "comma-dangle": [
+            "error",
+            "never"
+        ],
         "no-shadow": [
             "error",
             {

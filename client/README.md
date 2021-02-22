@@ -628,8 +628,6 @@ becomes this:
 
 ```css
 .App {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -827,7 +825,7 @@ To customize Bootstrap, create a file called `src/custom.scss` (or similar) and 
 
 ```scss
 // Override default variables before the import
-$body-bg: #000;
+$body-bg: #000000;
 
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';

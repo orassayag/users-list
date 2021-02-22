@@ -6,5 +6,5 @@ const addCommasToNumber = (number) => {
 };
 
 module.exports = {
-    addCommasToNumber:addCommasToNumber
+    addCommasToNumber: addCommasToNumber
 };
