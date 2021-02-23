@@ -1,6 +1,6 @@
 # Users List
 
-Built in November 2018. React.js + Node.js load list of users with infinite scroll + Call Rest API with Websocket and view new users added in React.js.
+Built in November 2018. A React.js + Node.js project to load list of users with infinite scroll + Call Rest API with Websocket and view new users added dynamically.
 
 ## Getting Started
 
