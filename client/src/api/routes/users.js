@@ -1,6 +1,6 @@
 import api from '../api';
 
-// Handle the call to the API to preform get all the users.
+// Handle the call to the API to perform a 'GET' request to get all the users.
 export const getUsers = (data) => {
     return new Promise((resolve, reject) => {
         try {

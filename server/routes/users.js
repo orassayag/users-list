@@ -6,7 +6,7 @@ const router = express.Router();
 // Get all users.
 router.get('/getUsers', async (req, res) => {
 
-    // Validate from and top parameters.
+    // Validate the from and the top parameters.
     const validateResult = validateGetUsers(req);
     if (validateResult) {
         return res.status(400).send(validateResult);
@@ -19,7 +19,7 @@ router.get('/getUsers', async (req, res) => {
 // Add users to the list and push notification.
 router.post('/addUsers', async (req, res) => {
 
-    // Validate request.
+    // Validate the request.
     const validateResult = validateAddUsers(req);
     if (validateResult) {
         return res.status(400).send(validateResult);

@@ -3,7 +3,7 @@ require('express-async-errors');
 
 module.exports = () => {
 
-    // Set winston logger.
+    // Set the winston logger.
     winston.add(winston.transports.File, {
         filename: 'logfile.log'
     });

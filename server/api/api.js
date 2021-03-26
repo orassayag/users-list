@@ -1,6 +1,6 @@
-// Get all users from external json files.
+// Get all users from external JSON files.
 const getUsersFromFiles = () => {
-    // Load all data from json files.
+    // Load all data from JSON files.
     const usersData = require('../data/users.json');
     const usersNamesData = require('../data/userNames.json');
 

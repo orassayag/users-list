@@ -1,11 +1,11 @@
 Steps to view the solution:
 1. Open server project on IDE (I used VS CODE).
-2. Terminal: npm i
-3. Terminal: node index.js
+2. In the terminal: npm i
+3. In the terminal: node index.js
 4. Make sure the port running is 3000.
 5. Open client project on another IDE (I used VS CODE).
-6. Terminal: npm i
-7. Terminal: npm start
+6. In the terminal: npm i
+7. In the terminal: npm start
 8. Make sure the port running is 3001.
 
 Happy testing! :)

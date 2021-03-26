@@ -17,17 +17,17 @@ const validateUser = (userData, i) => {
         return `User index ${i} - User object is missing.`;
     }
 
-    // Validate id.
+    // Validate the Id.
     if (!userData.id) {
-        return `User index ${i} - User id is missing.`;
+        return `User index ${i} - User Id is missing.`;
     }
 
     const userId = Number(userData.id);
     if (isNaN(userId)) {
-        return `User index ${i} - Invalid user id parameter (Not a number).`;
+        return `User index ${i} - Invalid user Id parameter (Not a number).`;
     }
 
-    // Validate position.
+    // Validate the position.
     if (!userData.position) {
         return `User index ${i} - User position is missing.`;
     }
@@ -41,7 +41,7 @@ const validateUser = (userData, i) => {
         return `User index ${i} - User position less than the minimum of 5 characters.`;
     }
 
-    // Validate monthlySalary.
+    // Validate the monthlySalary.
     if (!userData.monthlySalary) {
         return `User index ${i} - User monthlySalary is missing.`;
     }
@@ -54,25 +54,25 @@ const validateUser = (userData, i) => {
     return null;
 };
 
-// Validate the user name parameter.
+// Validate the username parameter.
 const validateUserName = (userNameData, i) => {
 
-    // Validate name.
+    // Validate the name.
     if (!userNameData) {
-        return `User index ${i} - User name object is missing.`;
+        return `User index ${i} - Username object is missing.`;
     }
 
     if (!userNameData.name) {
-        return `User index ${i} - User name is missing.`;
+        return `User index ${i} - Username is missing.`;
     }
 
     const userName = userNameData.name.trim();
     if (userName.length > 100) {
-        return `User index ${i} - User name exceeds the maximum of 100 characters.`;
+        return `User index ${i} - Username exceeds the maximum of 100 characters.`;
     }
 
     if (userName.length < 5) {
-        return `User index ${i} - User name is under the minimum of 5 characters.`;
+        return `User index ${i} - Username is under the minimum of 5 characters.`;
     }
 
     return null;
@@ -99,7 +99,7 @@ const createUsersFromJsons = (users, usersNames) => {
             continue;
         }
 
-        // Validate user name.
+        // Validate the username.
         const userNameData = usersNames.find(u => u.id === userData.id);
         const validateUserNameErrorMessage = validateUserName(userNameData);
         if (validateUserNameErrorMessage) {
@@ -128,7 +128,7 @@ const createUsersFromAPI = (data) => {
 
     const usersList = [];
 
-    // Loop on all users data;
+    // Loop on all users data.
     for (let i = 0; i < data.users.length; i++) {
 
         // Validate user basic data.
@@ -139,7 +139,7 @@ const createUsersFromAPI = (data) => {
             continue;
         }
 
-        // Validate user name.
+        // Validate the username.
         const validateUserNameErrorMessage = validateUserName(userData);
         if (validateUserNameErrorMessage) {
             winston.error(validateUserNameErrorMessage);

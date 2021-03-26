@@ -118,7 +118,7 @@ class Home extends Component {
             }
         });
 
-        // start observing
+        // Start observing.
         intersectionObserver.observe(this.lastElement.current);
 
         // Scroll into an element.
