@@ -6,7 +6,7 @@ Built in November 2018. A React.js + Node.js project to load a list of users wit
 
 Clone the project to your computer.
 Steps to view the solution:
-1. Open server project on IDE (I used VS CODE).
+1. Open server project on IDE (I used VSCode).
 2. In the terminal: npm i
 3. In the terminal: node index.js
 4. Make sure the port running is 3000.
@@ -17,7 +17,7 @@ Steps to view the solution:
 
 ### Prerequisites
 
-You'll need to install VS Code, Node, and clone the project, run npm i + npm start.
+You'll need to install VSCode, Node, and clone the project, run npm i + npm start.
 
 ## Built With
 
