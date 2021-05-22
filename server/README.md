@@ -1,29 +1,32 @@
-# Users List
-
-Built in November 2018. A React.js + Node.js project to load a list of users with infinite scroll + Call Rest API with Websocket and view new users added dynamically.
+# Server
 
 ## Getting Started
 
-Clone the project to your computer.
+Clone the application to your computer.
 Steps to view the solution:
-1. Open server project on IDE (I used VSCode).
+1. Open server application on IDE (I use VSCode).
 2. In the terminal: npm i.
-3. In the terminal: node index.js.
-4. Make sure the port running is 3000.
-5. Open client project on another IDE (I used VSCode).
-6. In the terminal: npm i.
-7. In the terminal: npm start.
-8. Make sure the port running is 3001.
+3. In the terminal: npm start.
+
+READ THE FOLLOWING SETTINGS BEFORE YOU BEGIN:
+
+-Instructions & How to use:
+1. Go to the settings.js file and make sure that all settings are fit to needs.
+2. Read the full instructions guide in INSTRUCTIONS.md file.
+3. Run the script by 'npm start' in the terminal and let the magic begin. :)
+
+In the terminal: npm start.
+
+Happy testing! :)
 
 ### Prerequisites
 
-You'll need to install VSCode, Node, and clone the project, and in the terminal run: 'npm i + npm start'.
+You'll need to install VSCode, Node, and clone the application, and in the terminal run: npm i.
 
 ## Built With
 
 * [Node.js](https://nodejs.org/en/) - The web framework used - Server side.
-* [React.js](https://reactjs.org/) - The web framework used - Client side.
-* [GIT](https://git-scm.com/) - Source management.
+* [Git](https://git-scm.com/) - Source management.
 
 ## Contributing
 
