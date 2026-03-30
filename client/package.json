@@ -1,11 +1,26 @@
 {
-  "name": "client",
+  "name": "users-list-client",
   "version": "0.1.0",
   "private": false,
+  "description": "React.js client for Users List application featuring infinite scroll, real-time WebSocket updates, and responsive UI",
   "repository": {
     "type": "git",
     "url": "git://github.com/orassayag/users-list.git"
   },
+  "keywords": [
+    "react",
+    "reactjs",
+    "infinite-scroll",
+    "websocket",
+    "socket.io-client",
+    "real-time",
+    "pagination",
+    "responsive",
+    "less",
+    "webpack"
+  ],
+  "author": "Or Assayag <orassayag@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "@babel/core": "7.1.0",
     "@svgr/webpack": "2.4.1",

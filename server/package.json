@@ -1,8 +1,8 @@
 {
-    "name": "server",
+    "name": "users-list-server",
     "version": "1.0.0",
     "private": false,
-    "description": "",
+    "description": "Node.js/Express server for Users List application with RESTful API, WebSocket support, and real-time data updates",
     "repository": {
         "type": "git",
         "url": "git://github.com/orassayag/users-list.git"
@@ -11,9 +11,20 @@
     "scripts": {
         "start": "node index.js"
     },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "keywords": [
+        "nodejs",
+        "express",
+        "websocket",
+        "socket.io",
+        "rest-api",
+        "pagination",
+        "real-time",
+        "caching",
+        "winston",
+        "cors"
+    ],
+    "author": "Or Assayag <orassayag@gmail.com>",
+    "license": "MIT",
     "dependencies": {
         "cors": "^2.8.5",
         "eslint": "^5.1.0",
